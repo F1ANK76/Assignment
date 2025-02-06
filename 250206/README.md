@@ -12,3 +12,6 @@
 1. find : 존재하지 않는 학생 ID나 과목 접근 시 예외 처리 및 어떤 학생이 특정 과목을 수강했는지 확인하기 위해 사용
 2. max_element : 특정 과목에서 가장 높은 점수를 받은 학생을 찾기 위하여 사용
 3. sort : 동점자가 있을 경우 학생 ID를 오름차순으로 정렬해서 출력하기 위하여 사용
+
+### 출력 결과
+![image](https://github.com/user-attachments/assets/c239a713-1d44-49a2-8058-e61f75b5ecce)
