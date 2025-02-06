@@ -1,5 +1,4 @@
 #include <iostream>
-#include <unordered_map>
 #include <map>
 #include <vector>
 #include <iomanip>
@@ -69,7 +68,7 @@ public:
         int maxScore = *max_element(subjectScores[subject].begin(), subjectScores[subject].end());
         vector<int> topScorers;
 
-        // 최고 점수를 받은 학생을 찾아 리스트에 추가
+        // 최고 점수를 받은 학생을 찾아 벡터에 추가
         for (const auto& student : studentGrades) {
             // 해당 번호의 학생이 가진 map<string, int> 과목 정보에서 해당 과목이 있는지, 있다면 해당 점수가 최고점인지 판단
             if (student.second.find(subject) != student.second.end() && student.second.at(subject) == maxScore) {
@@ -114,4 +113,3 @@ int main() {
 
     return 0;
 }
-
