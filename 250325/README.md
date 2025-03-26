@@ -17,7 +17,8 @@
 ## 시도 횟수 및 상태 관리
 1. 플레이어(Host/Guest) 각각 3번의 기회를 가지고 있는 상태
 2. 유효하지 않은 입력을 했을 때(예: 중복 숫자 포함, 3자리가 아닌 입력 등)는 아웃(OUT) 처리
-3. 입력할 때마다 플레이어별 남은 시도 횟수를 갱신
+3. 입력할 때마다 플레이어별 남은 시도 횟수 갱신 및 UI로 확인할 수 있도록 구현
+4. PlayerState->GetPlayerName()를 이용하여 어느 플레이어가 메시지를 보냈는지 확인할 수 있도록 추가 처리
 
 ## 승리, 무승부, 게임 리셋
 1. 3번 내에 3S를 맞춘 플레이어가 나오면 즉시 승리 처리
@@ -26,6 +27,7 @@
 
 ## C++ 라이브러리 분리
 1. 판정(S/B 계산)과 난수 생성 로직은 별도의 C++ 라이브러리(또는 C++ Class)로 분리해서 구현 완료
+2. UObject를 상속받은 UChatGameManager 클래스에 해당 분리 내용 반영
 
 ![image](https://github.com/user-attachments/assets/f429a174-112a-4003-ba63-aed5a8242ff6)
 ![image](https://github.com/user-attachments/assets/f35fa7e2-a1e9-4562-afff-c94086b38b9f)
