@@ -27,3 +27,6 @@
 ## C++ 라이브러리 분리
 1. 판정(S/B 계산)과 난수 생성 로직은 별도의 C++ 라이브러리(또는 C++ Class)로 분리해서 구현 완료
 
+![image](https://github.com/user-attachments/assets/f429a174-112a-4003-ba63-aed5a8242ff6)
+![image](https://github.com/user-attachments/assets/f35fa7e2-a1e9-4562-afff-c94086b38b9f)
+
