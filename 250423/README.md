@@ -1,4 +1,4 @@
-# C++ 게임 개발자를 위한 코딩 테스트 관련 핵심 주제
+# C++ 게임 개발자를 위한 코딩 테스트 관련 핵심 내용
 
 ## 1. STL 기본 컨테이너
 - **정의** : C++에서 자주 사용하는 자료구조인 `vector`, `stack`, `queue` 등 기본 컨테이너들을 의미
@@ -53,6 +53,24 @@ vector<int> twoSum(vector<int> nums, int target) {
 - **핵심 포인트**:
   - 문제 해결 과정에서 가지치기가 필요하고, 효율적인 탐색을 위해 불필요한 경로를 미리 배제할 때 유용
   - 조합, 순열, 부분집합 탐색 문제, 최적화 문제, 경로 탐색 문제 등에 사용
+ 
+```
+void backtrack(vector<int> nums, vector<int> path, int target) {
+    int total = accumulate(path.begin(), path.end(), 0);
+
+    if (total > target) return;        // 조건 안 맞으면 중단
+    if (total == target) {             // 조건 맞으면 정답 증가
+        answer++;
+        return;
+    }
+
+    for (int i = 0; i < nums.size(); i++) {
+        path.push_back(nums[i]);       // 선택
+        backtrack(nums, path, target); // 다음 단계로
+        path.pop_back();               // 백트랙
+    }
+}
+```
 
 ## 6. 트리, 그래프, DFS/BFS 탐색
 - **정의**
