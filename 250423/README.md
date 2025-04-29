@@ -26,6 +26,27 @@
 - **핵심 포인트**:  
   - 가능한 경우의 수가 작고 제한적일 때, 정답을 얻기 위해서는 직접 시도해보는 수밖에 없을 때, 복잡한 로직 없이 직관적으로 경우를 열거할 수 있을 때 사용
   - 모든 조합이나 순열, 좌표, 구간, 조건 등을 직접 탐색해 정답을 도출해야 하는 문제에 적합
+  - 예시 : 주어진 배열에서 두 수를 더해서 목표값을 만드는 두 수의 인덱스를 찾는 문제를 브루트포스 방식으로 해결할 수 있음
+
+```
+vector<int> twoSum(vector<int> nums, int target) {
+    vector<int> result;
+
+    // 모든 가능한 두 수의 조합을 검사
+    for (int i = 0; i < nums.size(); ++i) {
+        for (int j = i + 1; j < nums.size(); ++j) {
+
+            if (nums[i] + nums[j] == target) {
+                result.push_back(i);
+                result.push_back(j);
+                return result;
+            }
+        }
+    }
+
+    return result;
+}
+```
 
 ## 5. 백트래킹
 - **정의** : 조건을 만족하지 않는 경로는 미리 제외하면서 탐색하는 가지치기 기반의 완전탐색 기법
