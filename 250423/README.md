@@ -53,6 +53,7 @@ vector<int> twoSum(vector<int> nums, int target) {
 - **핵심 포인트**:
   - 문제 해결 과정에서 가지치기가 필요하고, 효율적인 탐색을 위해 불필요한 경로를 미리 배제할 때 유용
   - 조합, 순열, 부분집합 탐색 문제, 최적화 문제, 경로 탐색 문제 등에 사용
+  - 예시 : 같은 숫자를 여러 번 사용할 수 있는 조합 중에서 합이 target이 되는 경우의 수 개수 구하기
  
 ```
 void backtrack(vector<int> nums, vector<int> path, int target) {
